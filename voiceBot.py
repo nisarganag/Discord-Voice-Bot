@@ -15,7 +15,18 @@ from gtts import gTTS
 engine = pyttsx3.init()
 
 # Initialize the bot
-TOKEN = "MTMyNDY1MzIzOTYxNzk4MjUxNA.Gh8sGo.T_nEevvP_5yvKlnrMLpPLLRDJYHj6NiR3_KjQ8"  # Replace with your actual bot token
+def read_token():
+    try:
+        with open("token.txt", "r") as file:
+            # Read the first line of the file and extract the token
+            token_line = file.readline().strip()
+            token = token_line.split('=')[1].strip().strip('"')
+            return token
+    except Exception as e:
+        print(f"Error reading token: {e}")
+        return None
+
+TOKEN = read_token()  # Replace with your actual bot token
 intents = discord.Intents.default()
 intents.message_content = True
 intents.voice_states = True  # Enable voice state intent
