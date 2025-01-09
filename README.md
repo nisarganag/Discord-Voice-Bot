@@ -22,3 +22,8 @@ Once FFmpeg is installed and added to your PATH, the bot will be able to process
 ### Install requirements
 
 Use  `pip install -r requirements.txt`
+
+
+### Bot Token File
+
+Create a token.txt file in source path and keep the token as `TOKEN = "yourToken"`
