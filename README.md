@@ -16,3 +16,8 @@ Before running the bot, you need to install **FFmpeg** for audio processing.
    After installation, you can verify if FFmpeg is correctly installed by running `ffmpeg -version` in your terminal.
 
 Once FFmpeg is installed and added to your PATH, the bot will be able to process and play audio correctly.
+
+
+### Install requirements
+
+Use **pip install -r requirements.txt**
