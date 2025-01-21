@@ -104,7 +104,7 @@ async def aaja(ctx):
 async def speak(ctx, text):
     """Make the bot speak the given text in the voice channel."""
     try:
-        tts = gTTS(text=text, lang='en')
+        tts = gTTS(text=text, lang='ru')
         tts.save("command.mp3")
         if ctx.voice_client is None:  # Check if bot is not connected
             if ctx.author.voice:
